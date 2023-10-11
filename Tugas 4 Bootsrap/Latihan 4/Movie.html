@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Movie API</title>
+
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/sb-admin-2.css" rel="stylesheet" />
+
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2162fe8fc6.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" class="sidebar-toggled">
+
+                        
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="">Movzxone XII</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="input-group mb-3">
+          <input type="text" id="search-text" class="form-control" placeholder="Input Movie Title" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary ml-2" type="button" id="btn-search">Search <i class="fa fa-search"></i></button>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <hr>
+
+    <div class="row" id="movie-list">        
+
+    </div>
+  </div>
+
+  
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between m-4"></div>
+
+                    <div class="row">
+                        <div class="col-lg mb-4">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <p> <span id="movie-title"></span></p>
+                                            </div>
+                                            <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                Judul
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa-solid fa-comment fa-2xl"  style="color: #2746a5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg mb-4">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <p> <span id="movie-year"></span></p>
+                                                    </div>
+                                                    <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                        <p class="card-text">Released
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa-regular fa-calendar fa-2xl" style="color: #2746a5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg mb-4">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <p><span id="movie-writer"></span></p>
+                                                    </div>
+                                                    <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                        <p class="card-text">Writer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa-solid fa-pen-nib fa-2xl" style="color: #2746a5"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg mb-4">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <p><span id="movie-genre"></span></p>
+                                                    </div>
+                                                    <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                        <p class="card-text">Genre
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa-solid fa-transgender fa-2xl" style="color: #2746a5;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-lg mb-4">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <p><span id="movie-actors"></span></p>
+                                                    </div>
+                                                    <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                        <p class="card-text">Actors
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa-solid fa-person fa-2xl" style="color: #2746a5;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                            <!--- RUNTIME -->
+
+                            <div class="col-lg mb-4">
+                                <div class="card shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto">
+                                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                            <p><span id="movie-runtime"></span></p>
+                                                        </div>
+                                                        <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                            <p class="card-text">Runtime
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fa-regular fa-clock fa-2xl" style="color: #2746a5;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    <div class="row mx-auto">
+                        <div class="col-lg mb-8">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 text-center">
+                                                <p><img id="movie-posters"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    
+                    <div class="col-lg mb-4">
+                        <div class="card shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                    <p><span id="movie-director"></span></p>
+                                                </div>
+                                                <div class="text-s font-weight-bold text-uppercase mb-1">
+                                                    <p class="card-text">Director
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fa-solid fa-folder-open fa-2xl" style="color: #2746a5;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Cards 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <a class="scroll-to-top rounded"
+        href="file:///C:/Users/felis/Downloads/startbootstrap-sb-admin-2-gh-pages/startbootstrap-sb-admin-2-gh-pages/smartfarming.html#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./Smartfarming2_files/jquery.min.js.download"></script>
+    <script src="./Smartfarming2_files/bootstrap.bundle.min.js.download"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="./Smartfarming2_files/jquery.easing.min.js.download"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="./Smartfarming2_files/sb-admin-2.min.js.download"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+    <script>
+        $(document).ready(function () {
+            const apiKey = '6ec10022';
+    
+            // Add an event listener for the search button click
+            $('#btn-search').on('click', function () {
+                performSearch();
+            });
+    
+            // Add an event listener for the "Enter" key press on the input field
+            $('#search-text').on('keypress', function (e) {
+                if (e.which === 13) {
+                    performSearch();
+                }
+            });
+    
+            function performSearch() {
+                // Retrieve the input value from the search input field
+                const movieTitle = $('#search-text').val();
+    
+                // Make an API request with the user-inputted movie title
+                const apiUrl = `https://www.omdbapi.com/?t=${movieTitle}&apikey=${apiKey}`;
+    
+                $.get(apiUrl, function (data) {
+                    // Populate the movie information based on the API response
+                    $('#movie-title').text(data.Title);
+                    $('#movie-year').text(data.Year);
+                    $('#movie-writer').text(data.Writer);
+                    $('#movie-genre').text(data.Genre);
+                    $('#movie-actors').text(data.Actors);
+                    $('#movie-posters').attr('src', data.Poster);
+                    $('#movie-director').text(data.Director);
+                    
+                });
+            }
+        });
+    </script>
+
+<style>
+    /* Navbar Styling */
+.navbar {
+  background-color: #343a40; /* Warna latar belakang */
+  padding: 15px 0; /* Padding atas dan bawah */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Ukuran font */
+  color: #ffffff; /* Warna teks */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* Warna ikon toggle */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Hapus outline pada focus */
+}
+
+/* Hover efek pada link navbar */
+.navbar-nav .nav-link:hover {
+  color: #17a2b8; /* Warna teks saat dihover */
+}
+
+/* Efek transparansi saat dihover */
+.navbar-nav .nav-item:hover {
+  background-color: rgba(23, 162, 184, 0.2);
+}
+
+/* Efek transisi pada navbar */
+.navbar {
+  transition: background-color 0.3s;
+}
+
+
+</style>
+</body>
+
+</html>
